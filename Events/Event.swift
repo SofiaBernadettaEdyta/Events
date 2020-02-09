@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct Event {
+class Event {
     var title: String
     var date: Date
+    
+    init(title: String, date: Date) {
+        self.title = title
+        self.date  = date
+    }
 }
