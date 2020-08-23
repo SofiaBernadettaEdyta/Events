@@ -8,16 +8,16 @@
 
 import Foundation
 
-class Events {
-    private var events: [Event] = []
+class EventsManager {
+    private(set) var events: [Event] = []
     
     func addEvent(title: String, date: Date) {
         let newEvent = Event(title: title, date: date)
         events.append(newEvent)
     }
     
-    func getEvents() -> [Event] {
-        return events
+    func getEvent(at index: Int) -> Event {
+        return events[index]
     }
     
     func editEvent(_ newEvent: Event, at index: Int) {
@@ -26,5 +26,9 @@ class Events {
     
     func removeEvent(at index: Int) {
         events.remove(at: index)
+    }
+    
+    func getNumberOfEvents() -> Int {
+        return events.count
     }
 }

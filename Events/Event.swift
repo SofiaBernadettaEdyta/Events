@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Event {
+struct Event: Equatable {
     var title: String
     var date: Date
     
